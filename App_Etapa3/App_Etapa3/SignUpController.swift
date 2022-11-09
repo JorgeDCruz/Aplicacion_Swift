@@ -8,35 +8,53 @@
 import UIKit
 
 class SignUpController: UIViewController{
-
+    
     @IBOutlet weak var usuarioTextField: UITextField!
     @IBOutlet weak var contraseñaTextField: UITextField!
     
-    @IBAction func RegisterButton(_ sender: Any) {
-
-        // Validación de usuario y contraseña
-        let capitalLetterRegEx = ".*[A-Z].*"
-        var textTest = NSPredicate(format: "SELF MATCHES %@", capitalLetterRegEx)
-        var capitalResult = textTest.evaluate(with: contraseñaTextField.text!)
-        
-        if contraseñaTextField.text!.count < 8 || !capitalResult {
+    func MostrarAlerta(titulo: String, mensaje: String) {
             let alert = UIAlertController(
-                title: "Contraseña inválida",
-                message: "Introduce una contraseña de al menos 8 caracteres y al menos una letra mayúscula",
-                preferredStyle: UIAlertController.Style.alert)
+                        title: titulo,
+                        message: mensaje,
+                        preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(
                 title: "Cerrar",
                 style: UIAlertAction.Style.cancel))
-                    
+            
             self.present(alert, animated: true, completion: nil)
         }
-        else {
+    
+    @IBAction func RegisterButton(_ sender: Any) {
+        var valid = true
+    
+        // Validación de contraseña
+        let caracteresRegEx = ".*(?=.{8,16})(?=.*[A-Z]).*"
+        var caracteresTest = NSPredicate(format: "SELF MATCHES %@", caracteresRegEx)
+        var caracteresResult = caracteresTest.evaluate(with: contraseñaTextField.text!)
+        
+        
+        if !caracteresResult && valid {
+            valid = false
+            MostrarAlerta(titulo: "Contraseña inválida", mensaje: "Introduce una contraseña de al menos 8 caracteres y máximamente 16 caracteres, al menos 1 letra mayúscula, sin espacios")
+        }
+        
+        // Validación usuario
+        let caracteresUsuarioRegEx = "^[0-9a-zA-Z\\_]{3,16}$"
+        caracteresTest = NSPredicate(format: "SELF MATCHES %@", caracteresUsuarioRegEx)
+        caracteresResult = caracteresTest.evaluate(with: usuarioTextField.text!)
+        if (!caracteresResult && valid) {
+            valid = false
+            MostrarAlerta(titulo: "Usuario inválido", mensaje: "Introduce un usuario de al menos 3 caracteres y máximamente 16 caracteres, sin espacios y sin símbolos")
+        }
+        
+        // Verificación de validaciones
+        if (valid) {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let imageViewController = storyBoard.instantiateViewController(withIdentifier: "CompanyView")
             imageViewController.modalPresentationStyle = .fullScreen
             self.present(imageViewController, animated: true)
-        }
     }
+}
     
     
     @IBAction func SignInButton(_ sender: Any) {
