@@ -103,13 +103,15 @@ class SignUpController: UIViewController{
                     // El usuario se creo de manera exitosa, se almacena el nombre y apellido
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["firstname" : nombre, "lastnane" : apellido, "uid" : result!.user.uid]) { (error) in
+                    db.collection("users").document(result!.user.uid).setData(["firstname" : nombre, "lastname" : apellido, "uid" : result!.user.uid]) { (error) in
                         
                         if error != nil {
                             // Mostrar el error
                             self.MostrarAlerta("Error", "Los datos no se guardaron de manera adecuada")
                         }
                     }
+                    
+                    
                 }
             }
             
