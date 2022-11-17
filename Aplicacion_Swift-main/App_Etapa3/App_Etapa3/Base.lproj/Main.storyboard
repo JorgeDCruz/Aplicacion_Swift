@@ -755,7 +755,7 @@
         <!--Exam Controller-->
         <scene sceneID="tqS-sr-TmQ">
             <objects>
-                <viewController storyboardIdentifier="ExamView" id="8Zb-vZ-jT4" customClass="ExamController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExamView" id="8Zb-vZ-jT4" customClass="ExamController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="whB-OI-Jvw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -874,7 +874,7 @@
                                     <color key="baseForegroundColor" red="0.83710128009999996" green="0.2301739857" blue="0.29372759679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="VocabularyButton:" destination="8Zb-vZ-jT4" eventType="touchUpInside" id="CnC-5D-O5I"/>
+                                    <action selector="VocabularyButton:" destination="8Zb-vZ-jT4" eventType="touchUpInside" id="zaj-5W-hIG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -902,14 +902,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exámen - Nivel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt4-F6-Fd2">
-                                <rect key="frame" x="39" y="107" width="180" height="32.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examen - Nivel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt4-F6-Fd2">
+                                <rect key="frame" x="39" y="107" width="180" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOa-ID-BCu">
-                                <rect key="frame" x="227" y="107" width="18" height="32.5"/>
+                                <rect key="frame" x="227" y="107.5" width="18" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -933,7 +933,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-f1-TBx">
-                                <rect key="frame" x="87" y="320" width="240" height="155"/>
+                                <rect key="frame" x="87" y="320.5" width="240" height="154.5"/>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3h-CX-pQM">
                                 <rect key="frame" x="54" y="506" width="307" height="47"/>
@@ -993,21 +993,24 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Terminar examen">
                                     <color key="baseBackgroundColor" red="0.83710128009999996" green="0.2301739857" blue="0.29372759679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="examButton:" destination="Bxl-oX-yoH" eventType="touchUpInside" id="gVR-vg-r6f"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pregunta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSw-b7-Yfd">
-                                <rect key="frame" x="159" y="204" width="72" height="20"/>
+                                <rect key="frame" x="159" y="204.5" width="72" height="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYE-AY-BwN">
-                                <rect key="frame" x="233" y="204" width="12" height="20"/>
+                                <rect key="frame" x="233" y="204.5" width="12" height="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3W4-n2-Zbi">
-                                <rect key="frame" x="87" y="238" width="240" height="4"/>
+                                <rect key="frame" x="87" y="238.5" width="240" height="4"/>
                                 <color key="progressTintColor" red="0.83710128009999996" green="0.2301739857" blue="0.29372759679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                         </subviews>

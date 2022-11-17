@@ -15,7 +15,7 @@ class ExamVocabularyController: UIViewController {
     
     let db = Firestore.firestore()
     let collection = "exams/exam1/grammar"
-    var questionArray = [17,1,3,4,5,6,7,8,9,10]
+    var questionArray = [24,1,3,4,5,6,7,8,9,10]
     
     // Variables utilizadas
     var currentQuestion = 0
@@ -29,6 +29,11 @@ class ExamVocabularyController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         getQuestions()
         newQuestion()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
     
     @IBAction func checkAnswer(_ sender: AnyObject) {
@@ -102,7 +107,6 @@ class ExamVocabularyController: UIViewController {
                 }
             }
             
-            // self.downloadImage(from: imageUrl)
             // Se muestra la pregunta en pantalla
             self.questionLabel.text = dataDescription?["question"] as? String ?? ""
             
@@ -126,18 +130,12 @@ class ExamVocabularyController: UIViewController {
         }
     }
     
-    func downloadImage(from url: URL) {
-        getData(from: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            // always update the UI from the main thread
-            DispatchQueue.main.async() { [weak self] in
-                self?.image.image = UIImage(data: data)
-            }
-        }
+    @IBAction func examButton(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "ExamView")
+        imageViewController.modalPresentationStyle = .fullScreen
+        self.present(imageViewController, animated: true)
     }
     
-    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-    }
+    
 }
