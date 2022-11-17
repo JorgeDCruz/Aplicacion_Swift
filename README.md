@@ -21,6 +21,8 @@ Link al repo de la API: https://github.com/Carlosmor95/Api_Equipo_Marquinhos.git
 
 La base de datos está en Firebase, dónde solamente aquellas personas con permisos de administrador tienen la posibilidad de visualización y modificación de esta. No se incluirá mayor información acerca de la base de datos por razones de seguridad.
 
+PS:(Si busca el link de github del repositorio de la aplicación, esta es: https://github.com/JorgeDCruz/Aplicacion_Swift.git).
+
 <br></br>
 ## Autores: 
 ### - Equipo: Relámpagos Marquinhos
