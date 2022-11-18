@@ -32,7 +32,6 @@ class LectionController: UIViewController, UITableViewDataSource {
             cell.nombreDelBoton.setTitleColor(.black, for: .normal)
             
         }
-        
         if indexPath.row % 4 == 3 {
             cell.nombreDelBoton.setTitle("Avanzado", for: .normal)
             cell.nombreDelBoton.setTitleColor(.black, for: .normal)

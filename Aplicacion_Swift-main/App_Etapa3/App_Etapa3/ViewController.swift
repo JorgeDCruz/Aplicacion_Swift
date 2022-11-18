@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         self.present(imageViewController, animated: true)
     }
     
-    // Checa los campos de texto. Si el contenido no es ésta vacío, se regresa nil. De lo contrario retorna un mensaje de error
+    // Checa los campos de texto. Si el contenido no es está vacío, se regresa nil. De lo contrario retorna un mensaje de error
     func validateFields() -> String? {
         // Checar que todos los campos esten llenos
         if usuarioTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  || contraseñaTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{

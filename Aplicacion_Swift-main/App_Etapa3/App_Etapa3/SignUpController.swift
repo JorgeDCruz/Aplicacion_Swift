@@ -17,11 +17,12 @@ class SignUpController: UIViewController{
     @IBOutlet weak var apellidoTextField: UITextField!
     @IBOutlet weak var contraseñaTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var switcher: UISwitch!
     
     override func viewDidLoad(){
         super.viewDidLoad()
         
-        errorLabel.alpha = 0
+        //errorLabel.alpha = 0
     }
     
     // Función que muestra una alerta en pantalla
@@ -54,20 +55,35 @@ class SignUpController: UIViewController{
     // Checa los campos de texto y sus contenidos para verificar si es correcta. Si el contenido es correcto, se regresa nil. De lo contrario retorna un mensaje de error
     func validateFields() -> String? {
         // Checar que todos los campos esten llenos
-        if correoTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  || nombreTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  || apellidoTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  ||	 contraseñaTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+        let switchState = switcher!.isOn
+        if correoTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  || nombreTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  || apellidoTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  ||	 contraseñaTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Favor de llenar todos los campos de texto."
+        }
+        if (!switchState) {
+            return "Favor de aceptar los términos y condiciones"
         }
         
         // Checar que la contraseña ingresada sea segura
-        let contraseñaLimpia = contraseñaTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        if validatePassword(contraseñaLimpia) == false {
+        let testEspacio = contraseñaTextField.text!.contains(" ")
+        //let contraseñaLimpia = !.trimmingCharacters(in: .whitespacesAndNewlines)
+        if testEspacio || validatePassword(contraseñaTextField.text!) == false {
             return "Introduce una contraseña de al menos 8 caracteres y máximamente 16 caracteres, al menos 1 letra mayúscula, sin espacios"
         }
         
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let emailTest = emailPred.evaluate(with: correoTextField.text!)
+        
+        if (!emailTest) {
+            return "Introduce un correo electrónico válido, sin espacios"
+        }
+        
         // Checar el nombre y apellido del usuario
-        let nombreLimpio = nombreTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let apellidoLimpio = apellidoTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        if validateName(nombreLimpio) == false || validateName(apellidoLimpio) == false {
+        /*let nombreLimpio = nombreTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let apellidoLimpio = apellidoTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)*/
+        let testName = nombreTextField.text!.contains(" ")
+        let testApellido = apellidoTextField.text!.contains(" ")
+        if testName || testApellido ||  validateName(nombreTextField.text!) == false || validateName(apellidoTextField.text!) == false {
             return "Introduce un nombre o apellido de al menos 3 caracteres y máximamente 16 caracteres, sin espacios y sin símbolos"
         }
         
@@ -97,7 +113,7 @@ class SignUpController: UIViewController{
                 // Se comprueba que no haya errores
                 if err != nil {
                     // Hubo un error creando al usuario
-                    self.MostrarAlerta("Error", "Se ha producido un error al crear al usuario.")
+                    self.MostrarAlerta("Error", "Se ha producido un error al crear al usuario, pruebe cambiando el correo electrónico u otros datos")
                 }
                 else {
                     // El usuario se creo de manera exitosa, se almacena el nombre y apellido
@@ -114,8 +130,11 @@ class SignUpController: UIViewController{
                     
                 }
             }
-            
             // Se mueve a la pantalla
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let companyController = storyBoard.instantiateViewController(withIdentifier: "CompanyView")
+            companyController.modalPresentationStyle = .fullScreen
+            self.present(companyController, animated: true)
             
         }
         
