@@ -1,7 +1,7 @@
 # Aplicación iOS de Lenguaje de Señas
 
 ## Descripción del proyecto
-El proyecto consiste en el desarrollo de un prototipo de una aplicación para iOS para el aprendizaje de lenguaje de señas mexicano a través de lecciones y exámenes. La aplicación se esta desarrollando a la mano con la compañía [John Deere](https://www.deere.com/en/index.html). 
+El proyecto consiste en el desarrollo de un prototipo de una aplicación para iOS para el aprendizaje de lenguaje de señas mexicano a través de lecciones y exámenes. 
 
 La aplicación se esta desarrollando en el lenguaje **"Swift"** para dispositivos iOS, a la mando de una base de datos en **Firebase**. El desarrollo se esta realizando en el IDE **"XCode 13"**, exclusivo para dispositivos con MacOS.
 
