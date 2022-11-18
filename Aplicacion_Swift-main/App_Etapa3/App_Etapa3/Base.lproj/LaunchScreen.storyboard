@@ -20,10 +20,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="CAT-oX-BIs">
                                 <rect key="frame" x="42" y="218" width="331" height="282"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Aplicación de lenguaje de señas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaQ-w5-0i3">
-                                <rect key="frame" x="35" y="524" width="348" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplicación de lenguaje de señas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaQ-w5-0i3">
+                                <rect key="frame" x="35" y="522" width="344" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="CoW-f3-ZDF"/>
+                                    <constraint firstAttribute="height" constant="30" id="owE-bD-6dX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -33,13 +33,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CAT-oX-BIs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0Rj-XV-d8D"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CaQ-w5-0i3" secondAttribute="bottom" constant="284" id="94h-CD-qZZ"/>
-                            <constraint firstItem="CAT-oX-BIs" firstAttribute="centerX" secondItem="CaQ-w5-0i3" secondAttribute="centerX" id="Cjy-W1-Htj"/>
-                            <constraint firstItem="CAT-oX-BIs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="NHe-Xb-Qv4"/>
-                            <constraint firstItem="CaQ-w5-0i3" firstAttribute="top" secondItem="CAT-oX-BIs" secondAttribute="bottom" constant="57" id="TL5-ZD-q77"/>
-                            <constraint firstItem="CaQ-w5-0i3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="Xs3-GM-s26"/>
-                            <constraint firstItem="CAT-oX-BIs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="174" id="mZW-5N-7SW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CaQ-w5-0i3" secondAttribute="bottom" constant="310" id="D5h-sF-e9K"/>
+                            <constraint firstItem="CAT-oX-BIs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IWe-pB-dK0"/>
+                            <constraint firstItem="CAT-oX-BIs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="iBe-Ga-Hay"/>
+                            <constraint firstItem="CaQ-w5-0i3" firstAttribute="top" secondItem="CAT-oX-BIs" secondAttribute="bottom" constant="22" id="loB-3E-8bg"/>
+                            <constraint firstItem="CAT-oX-BIs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="pb9-Ut-2LQ"/>
+                            <constraint firstItem="CAT-oX-BIs" firstAttribute="centerX" secondItem="CaQ-w5-0i3" secondAttribute="centerX" id="q9m-6m-yuM"/>
                         </constraints>
                     </view>
                 </viewController>
