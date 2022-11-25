@@ -19,14 +19,7 @@ class ProfileController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         getData()
-    }
-    
-    @IBAction func GroupButton(_ sender: Any) {
-        // Se mueve a la pantalla
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let joinGroupView = storyBoard.instantiateViewController(withIdentifier: "JoinGroupView")
-        joinGroupView.modalPresentationStyle = .fullScreen
-        self.present(joinGroupView, animated: true)
+        
     }
     
     func getData() {

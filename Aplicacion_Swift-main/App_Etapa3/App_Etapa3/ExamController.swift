@@ -21,7 +21,6 @@ class ExamController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = indexPath.row
         // Cada leccion cuenta con un examen de vocabulario y uno de X
         // if ((row % 2) == 0) {
         let cell = tableView.dequeueReusableCell(withIdentifier: ExamVocabTableViewCell.identifier, for: indexPath) as! ExamVocabTableViewCell
@@ -48,13 +47,6 @@ class ExamController: UIViewController, UITableViewDataSource {
         }
             
         return cell
-    //}
-        
-        //else {
-            //let cell = tableView.dequeueReusableCell(withIdentifier: "VocabullaryCell", for: indexPath)
-            
-            //return cell
-        //}
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
