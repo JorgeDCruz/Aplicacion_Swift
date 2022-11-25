@@ -42,7 +42,4 @@ class ExamVocabTableViewCell : UITableViewCell {
         button.setTitle("Vocabulario", for: .normal)
         button.setTitleColor(.link, for: .normal)
     }
-
-    
-    
 }

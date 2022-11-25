@@ -8,35 +8,69 @@
 import UIKit
 
 class LectionController: UIViewController, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 16
-    }
     
     @IBOutlet weak var LectionTable: UITableView!
+    
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        3
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let title = "Lección " + String(section + 1)
+        return title
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Boton1", for: indexPath) as! LectionTable
-        cell.nombreDelBoton.titleLabel?.text = "Botonaso " + String(indexPath.row)
-        if indexPath.row%4 == 0{
-            cell.nombreDelBoton.backgroundColor = .lightGray
-            cell.nombreDelBoton.setTitle("Nivel " + String((indexPath.row / 4) + 1), for: .normal)
-            cell.nombreDelBoton.setTitleColor(.white, for: .normal)
-        }
         
-        if indexPath.row % 4 == 1 {
-            cell.nombreDelBoton.setTitle("Principiante", for: .normal)
-            cell.nombreDelBoton.setTitleColor(.black, for: .normal)
-        }
-        
-        if indexPath.row % 4 == 2 {
-            cell.nombreDelBoton.setTitle("Intermedio", for: .normal)
-            cell.nombreDelBoton.setTitleColor(.black, for: .normal)
+        // Celda para el boton de glosario - redirige al diccionario de la leccion
+        if indexPath.row % 3 == 0 {
             
+            tableView.register(UINib(nibName: "LectionTableViewCell", bundle: nil), forCellReuseIdentifier: "LectionTableViewCell")
+            let cellLection = tableView.dequeueReusableCell(withIdentifier: "LectionTableViewCell", for: indexPath) as! LectionTableViewCell
+            
+            // Se obtiene el numero de la leccion
+            let lection = indexPath.section + 1
+            cellLection.configure(lection)
+            cellLection.delegate = self
+            
+            return cellLection
         }
-        if indexPath.row % 4 == 3 {
-            cell.nombreDelBoton.setTitle("Avanzado", for: .normal)
-            cell.nombreDelBoton.setTitleColor(.black, for: .normal)
+        
+        if indexPath.row % 3 == 1 {
+            
+            tableView.register(UINib(nibName: "DictionaryTableViewCell", bundle: nil), forCellReuseIdentifier: "DictionaryTableViewCell")
+            let cellDictionary = tableView.dequeueReusableCell(withIdentifier: DictionaryTableViewCell.identifier, for: indexPath) as! DictionaryTableViewCell
+            
+            // Se obtiene el numero de la leccion
+            let lection = indexPath.section + 1
+            cellDictionary.configure(lection)
+            // cellDictionary.delegate = self
+            
+            return cellDictionary
         }
-         
+        
+        // Celda para el boton de glosario - redirige al diccionario de la leccion
+        if indexPath.row % 3 == 2 {
+            
+            tableView.register(UINib(nibName: "LectionExamTableViewCell", bundle: nil), forCellReuseIdentifier: "LectionExamTableViewCell")
+            let cellExam = tableView.dequeueReusableCell(withIdentifier: LectionExamTableViewCell.identifier, for: indexPath) as! LectionExamTableViewCell
+            
+            // Se obtiene el numero de la leccion
+            let lection = indexPath.section + 1
+            cellExam.configure(lection)
+            cellExam.delegate = self
+            
+            return cellExam
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: LectionTableViewCell.identifier, for: indexPath) as! LectionTableViewCell
+        
         return cell
     }
     
@@ -45,6 +79,7 @@ class LectionController: UIViewController, UITableViewDataSource {
         let imageViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileView")
         imageViewController.modalPresentationStyle = .fullScreen
         self.present(imageViewController, animated: true)
+
     }
     
     @IBAction func LogOutButton(_ sender: Any) {
@@ -69,3 +104,24 @@ class LectionController: UIViewController, UITableViewDataSource {
     }
     
 }
+
+extension LectionController : LectionTableViewCellDelegate {
+    func didTapButton(with lection: Int) {
+        
+    }
+}
+
+extension LectionController : LectionExamTableViewCellDelegate {
+    func goToExam(with lection: Int) {
+        // La leccion se configura en el controller para leer el examen correspondiente en la BD
+        CurrentLection.instance.lectionNumber = lection
+        
+        // Cambio de vista a ExamVocabularyViewController
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "ExamVocabularyView")
+        imageViewController.modalPresentationStyle = .fullScreen
+        self.present(imageViewController, animated: true)
+    }
+}
+
+
