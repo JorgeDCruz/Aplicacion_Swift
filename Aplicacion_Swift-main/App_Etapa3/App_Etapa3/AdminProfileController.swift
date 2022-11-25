@@ -1,32 +1,33 @@
 //
-//  ProfileController.swift
+//  AdminProfileController.swift
 //  App_Etapa3
 //
-//  Created by alumno on 04/11/22.
+//  Created by alumno on 23/11/22.
 //
 
 import UIKit
 import Firebase
-import FirebaseAuth
 import FirebaseFirestore
-
-class ProfileController: UIViewController {
+class AdminProfileController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
+    
     @IBOutlet weak var lastnameLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        getData()
-    }
     
-    @IBAction func GroupButton(_ sender: Any) {
+    @IBAction func enterCreationGroup(_ sender: Any) {
         // Se mueve a la pantalla
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let joinGroupView = storyBoard.instantiateViewController(withIdentifier: "JoinGroupView")
-        joinGroupView.modalPresentationStyle = .fullScreen
-        self.present(joinGroupView, animated: true)
+        let createGroupView = storyBoard.instantiateViewController(withIdentifier: "CreateGroupView")
+        createGroupView.modalPresentationStyle = .fullScreen
+        self.present(createGroupView, animated: true)
+    }
+    
+    @IBAction func ConfigureGroupButton(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let configureGroupView = storyBoard.instantiateViewController(withIdentifier: "ConfigureGroupView")
+        configureGroupView.modalPresentationStyle = .fullScreen
+        self.present(configureGroupView, animated: true)
     }
     
     func getData() {
@@ -70,4 +71,17 @@ class ProfileController: UIViewController {
         imageViewController.modalPresentationStyle = .fullScreen
         self.present(imageViewController, animated: true)
     }
+    
+    @IBAction func ProfileButton(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "AdminProfileView")
+        imageViewController.modalPresentationStyle = .fullScreen
+        self.present(imageViewController, animated: true)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
 }

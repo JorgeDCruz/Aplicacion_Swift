@@ -126,7 +126,7 @@ class SignUpController: UIViewController{
                             self.MostrarAlerta("Error", "Los datos no se guardaron de manera adecuada")
                         }
                     }
-                    
+                        
                     
                 }
             }

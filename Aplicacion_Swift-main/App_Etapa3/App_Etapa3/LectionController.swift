@@ -45,7 +45,6 @@ class LectionController: UIViewController, UITableViewDataSource {
         let imageViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileView")
         imageViewController.modalPresentationStyle = .fullScreen
         self.present(imageViewController, animated: true)
-
     }
     
     @IBAction func LogOutButton(_ sender: Any) {
