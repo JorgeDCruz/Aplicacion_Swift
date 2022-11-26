@@ -6,15 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 class LectionController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var LectionTable: UITableView!
     
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        return CurrentLection.instance.lectionTotal
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,6 +73,21 @@ class LectionController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    func setLectionCount() {
+        let db = Firestore.firestore()
+        db.collection("lections").getDocuments() {
+            (querySnapshot, err) in
+            
+            if let err = err {
+                print("Error getting documents: \(err)")
+            }
+            else {
+                let countQuery = querySnapshot?.count ?? 0
+                CurrentLection.instance.lectionTotal = countQuery
+            }
+        }
+    }
+    
     @IBAction func ProfileButton(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let imageViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileView")
@@ -100,6 +114,9 @@ class LectionController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setLectionCount()
+
+        // print("\(self.count)")
         LectionTable.dataSource = self
     }
     

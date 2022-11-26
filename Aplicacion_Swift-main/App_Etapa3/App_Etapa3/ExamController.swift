@@ -13,7 +13,7 @@ class ExamController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var ExamTable: UITableView!
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        return CurrentLection.instance.lectionTotal
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

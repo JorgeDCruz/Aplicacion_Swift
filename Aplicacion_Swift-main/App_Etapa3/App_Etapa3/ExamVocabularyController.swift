@@ -22,6 +22,7 @@ class ExamVocabularyController: UIViewController {
     var currentQuestion = 0
     var rightAnswerPlacement:UInt32 = 0
     var points = 0
+    
     @IBOutlet weak var lectionLabel: UILabel!
     @IBOutlet weak var userProgress: UIProgressView!
     @IBOutlet weak var questionCounter: UILabel!
