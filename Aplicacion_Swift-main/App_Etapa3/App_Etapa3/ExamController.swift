@@ -7,13 +7,13 @@
 
 import UIKit
 import Firebase
-/*
+
 class ExamController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var ExamTable: UITableView!
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        return CurrentLection.instance.lectionTotal
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,10 +21,9 @@ class ExamController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = indexPath.row
         // Cada leccion cuenta con un examen de vocabulario y uno de X
         // if ((row % 2) == 0) {
-       // let cell = tableView.dequeueReusableCell(withIdentifier: ExamVocabTableViewCell.identifier, for: indexPath) as! ExamVocabTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ExamVocabTableViewCell.identifier, for: indexPath) as! ExamVocabTableViewCell
             
         let db = Firestore.firestore()
         let user = Auth.auth().currentUser?.uid ?? ""
@@ -48,13 +47,6 @@ class ExamController: UIViewController, UITableViewDataSource {
         }
             
         return cell
-    //}
-        
-        //else {
-            //let cell = tableView.dequeueReusableCell(withIdentifier: "VocabullaryCell", for: indexPath)
-            
-            //return cell
-        //}
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -116,5 +108,5 @@ extension ExamController : ExamVocabTableViewCellDelegate {
         self.present(imageViewController, animated: true)
     }
 }
-*/
+
 
