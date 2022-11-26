@@ -40,6 +40,9 @@ class ExamVocabTableViewCell : UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         button.setTitle("Vocabulario", for: .normal)
-        // button.setTitleColor(.link, for: .normal)
+        button.setTitleColor(.link, for: .normal)
     }
+
+    
+    
 }

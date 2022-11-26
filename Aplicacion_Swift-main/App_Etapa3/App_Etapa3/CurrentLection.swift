@@ -15,6 +15,4 @@ class CurrentLection {
     }
     
     var lectionNumber = 0
-    
-    var lectionTotal = 1
 }

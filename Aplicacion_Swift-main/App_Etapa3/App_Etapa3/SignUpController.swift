@@ -38,6 +38,10 @@ class SignUpController: UIViewController{
             self.present(alert, animated: true, completion: nil)
         }
     
+    @IBAction func AvisoDePrivacidadButton(_ sender: Any) {
+        self.present(MyVariables.AvisoDePrivacidadButton(), animated: true, completion: nil)
+    }
+    
     // Compara el contenido de la contraseña con una expresión regular, con el fin de mantener un grado de seguridad de contraseñas
     func validatePassword(_ password : String) -> Bool {
         let passwordRegEx = ".*(?=.{8,16})(?=.*[A-Z]).*"
@@ -126,19 +130,16 @@ class SignUpController: UIViewController{
                             self.MostrarAlerta("Error", "Los datos no se guardaron de manera adecuada")
                         }
                     }
-                    
-                    
+                        
                 }
             }
+            self.present(MyVariables.logInButton(), animated: true)
             // Se mueve a la pantalla
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let companyController = storyBoard.instantiateViewController(withIdentifier: "CompanyView")
-            companyController.modalPresentationStyle = .fullScreen
-            self.present(companyController, animated: true)
+            MostrarAlerta("Éxito", "Usuario creado con éxito")
+            
             
         }
         
-        // Validar los campos
         
         // Crear el usuario
         

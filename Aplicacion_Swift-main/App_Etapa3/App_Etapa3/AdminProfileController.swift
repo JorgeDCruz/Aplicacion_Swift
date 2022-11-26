@@ -13,8 +13,9 @@ class AdminProfileController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var lastnameLabel: UILabel!
+    @IBOutlet weak var configureGroupButton: UIButton!
     
-    
+    @IBOutlet weak var seeGroupButton: UIButton!
     @IBAction func enterCreationGroup(_ sender: Any) {
         // Se mueve a la pantalla
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -47,6 +48,24 @@ class AdminProfileController: UIViewController {
             let apellido = dataDescription?["lastname"] as? String ?? ""
             self.nameLabel.text = name
             self.lastnameLabel.text = apellido
+            
+            // Muestra el botón de configurar grupo en caso de sí tener grupo creado
+            guard let userID = Auth.auth().currentUser?.uid else {
+                return
+            }
+            
+            db.collection("groups").whereField("admins", arrayContains: userID).getDocuments() { (querySnapshot, error) in
+                
+                if error != nil {
+                    return
+                } else {
+                    if (querySnapshot?.documents.count != 0) {
+                        self.configureGroupButton.isHidden = false
+                        self.seeGroupButton.isHidden = false
+                    }
+                    
+                }
+            }
         }
     }
     
@@ -59,28 +78,21 @@ class AdminProfileController: UIViewController {
     }
     
     @IBAction func LogOutButton(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "LoginView")
-        imageViewController.modalPresentationStyle = .fullScreen
-        self.present(imageViewController, animated: true)
+        self.present(MyVariables.logOutButton(), animated: true)
     }
     
     @IBAction func HomeButton(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "LectionView")
-        imageViewController.modalPresentationStyle = .fullScreen
-        self.present(imageViewController, animated: true)
+        self.present(MyVariables.homeButton(), animated: true)
     }
     
     @IBAction func ProfileButton(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "AdminProfileView")
-        imageViewController.modalPresentationStyle = .fullScreen
-        self.present(imageViewController, animated: true)
+        self.present(MyVariables.userProfileButton(), animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureGroupButton.isHidden = true
+        seeGroupButton.isHidden = true
+        self.getData()
         // Do any additional setup after loading the view.
     }
 

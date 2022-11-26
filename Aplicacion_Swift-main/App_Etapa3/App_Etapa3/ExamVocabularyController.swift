@@ -14,7 +14,8 @@ import FirebaseCore
 class ExamVocabularyController: UIViewController {
     
     let db = Firestore.firestore()
-    var lectionNumber : Int = CurrentLection.instance.lectionNumber
+    //var lectionNumber : Int = CurrentLection.instance.lectionNumber
+    var lectionNumber : Int = 0
     var collection : String = ""
     var questionArray = [1,2,3,4,5,6,7,8,9,10]
     
@@ -22,7 +23,6 @@ class ExamVocabularyController: UIViewController {
     var currentQuestion = 0
     var rightAnswerPlacement:UInt32 = 0
     var points = 0
-    
     @IBOutlet weak var lectionLabel: UILabel!
     @IBOutlet weak var userProgress: UIProgressView!
     @IBOutlet weak var questionCounter: UILabel!

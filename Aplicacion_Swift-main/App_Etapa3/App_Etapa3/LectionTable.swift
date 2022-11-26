@@ -10,6 +10,7 @@ import UIKit
 class LectionTable: UITableViewCell {
     
     @IBOutlet weak var nombreDelBoton: UIButton!
+    @IBOutlet weak var textoDelBoton: UILabel!
     
 }
 
