@@ -53,7 +53,6 @@ class CreateGroupController: UIViewController {
                     self.MostrarAlerta("Error", "El grupo no se ha podido crear")
                     return
                 }
-                self.MostrarAlerta("Éxito", "Grupo creado con éxito")
             }
             
         }
@@ -62,17 +61,26 @@ class CreateGroupController: UIViewController {
         
         
         @IBAction func ProfileButton(_ sender: Any) {
-            self.present(MyVariables.userProfileButton()   , animated: true)
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let imageViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileView")
+            imageViewController.modalPresentationStyle = .fullScreen
+            self.present(imageViewController, animated: true)
             
         }
         
         @IBAction func LogOutButton(_ sender: Any) {
-            self.present(MyVariables.logOutButton(), animated: true)
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let imageViewController = storyBoard.instantiateViewController(withIdentifier: "LoginView")
+            imageViewController.modalPresentationStyle = .fullScreen
+            self.present(imageViewController, animated: true)
         }
         
         
         @IBAction func HomeButton(_ sender: Any) {
-            self.present(MyVariables.homeButton(), animated: true)
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let imageViewController = storyBoard.instantiateViewController(withIdentifier: "LectionView")
+            imageViewController.modalPresentationStyle = .fullScreen
+            self.present(imageViewController, animated: true)
         }
         
         override func viewDidLoad() {
