@@ -10,11 +10,7 @@ import Firebase
 import FirebaseFirestore
 import FirebaseAuth
 
-
-
 class ViewController: UIViewController {
-    
-    
     @IBOutlet weak var usuarioTextField: UITextField!
     @IBOutlet weak var contraseñaTextField: UITextField!
     
@@ -44,8 +40,6 @@ class ViewController: UIViewController {
         imageViewController.modalPresentationStyle = .fullScreen
         self.present(imageViewController, animated: true)
     }
-    
-  
     
     // Checa los campos de texto. Si el contenido no es está vacío, se regresa nil. De lo contrario retorna un mensaje de error
     func validateFields() -> String? {

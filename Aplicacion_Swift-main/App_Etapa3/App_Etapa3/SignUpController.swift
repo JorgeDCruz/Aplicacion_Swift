@@ -130,7 +130,8 @@ class SignUpController: UIViewController{
                             self.MostrarAlerta("Error", "Los datos no se guardaron de manera adecuada")
                         }
                     }
-                        
+                    
+                    
                 }
             }
             self.present(MyVariables.logInButton(), animated: true)
@@ -140,6 +141,7 @@ class SignUpController: UIViewController{
             
         }
         
+        // Validar los campos
         
         // Crear el usuario
         

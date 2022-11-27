@@ -55,7 +55,7 @@ class JoinGroupController: UIViewController {
                 
             }
             
-        }
+    }
     
     @IBAction func ProfileButton(_ sender: Any) {
         self.present(MyVariables.userProfileButton(), animated: true)

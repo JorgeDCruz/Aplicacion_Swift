@@ -16,7 +16,7 @@ var doc = [Any]()
 var indexDoc = 0
 
 class ConfigureGroupController: UIViewController {
-    
+
     
     @IBOutlet weak var nameGroupLabel: UILabel!
     @IBOutlet weak var titleCodeGroup: UILabel!
@@ -96,38 +96,38 @@ class ConfigureGroupController: UIViewController {
     func UpdateDataInView() {
         // Carga labels correspondientes
         let db = Firestore.firestore()
-        
-        guard let userID = Auth.auth().currentUser?.uid else { self.MostrarAlerta("Error", "No se ha podido hacer la conexión con la base de datos")
-            return
-        }
-        
-        // Obtiene document id
-        db.collection("groups").whereField("admins", arrayContains: userID).getDocuments() { (querySnapshot, error) in
             
-            if error != nil {
-                self.MostrarAlerta("Error", "No se ha podido hacer la conexión con la base de datos")
+            guard let userID = Auth.auth().currentUser?.uid else { self.MostrarAlerta("Error", "No se ha podido hacer la conexión con la base de datos")
                 return
-            } else {
+            }
+            
+            // Obtiene document id
+            db.collection("groups").whereField("admins", arrayContains: userID).getDocuments() { (querySnapshot, error) in
+                
+                if error != nil {
+                    self.MostrarAlerta("Error", "No se ha podido hacer la conexión con la base de datos")
+                    return
+                } else {
                     if ((querySnapshot?.documents.isEmpty) == nil) {
                         self.MostrarAlerta("Error", "Usted no es administrador de algún grupo actualmente")
                         return
                     }
                 
-                for document in querySnapshot!.documents {
-                    // Si hace match con varios documentos, es necesario tener un array
+                    for document in querySnapshot!.documents {
+                        // Si hace match con varios documentos, es necesario tener un array
                     nameDocs.append(document.get("name") as! String)
                     docID.append(document.documentID)
                     doc.append(document)
-                }
+                    }
                 // Obtiene nombre de grupo y código
                /*    self.codeGroupLabel.text! = docID[0]
                 self.nameGroupLabel.text! = (doc[0] as AnyObject).get("name") as! String*/
+                        
+                        }
                 
+                    }
                 }
-                
-            }
-    }
-    
+   
     @IBAction func ProfileButton(_ sender: Any) {
         self.present(MyVariables.userProfileButton(), animated: true)
     }
@@ -154,7 +154,7 @@ class ConfigureGroupController: UIViewController {
         self.UpdateDataInView()
         
         
-        }
-        
     }
+
+}
 
