@@ -14,19 +14,24 @@ import FirebaseCore
 class ExamVocabularyController: UIViewController {
     
     let db = Firestore.firestore()
-    let collection = "exams/exam1/grammar"
-    var questionArray = [24,1,3,4,5,6,7,8,9,10]
+    var lectionNumber : Int = CurrentLection.instance.lectionNumber
+    var collection : String = ""
+    var questionArray = [1,2,3,4,5,6,7,8,9,10]
     
     // Variables utilizadas
     var currentQuestion = 0
     var rightAnswerPlacement:UInt32 = 0
     var points = 0
+    
+    @IBOutlet weak var lectionLabel: UILabel!
     @IBOutlet weak var userProgress: UIProgressView!
     @IBOutlet weak var questionCounter: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     
     override func viewDidAppear(_ animated: Bool) {
+        self.collection = "exams/exam" + String(self.lectionNumber) + "/grammar"
+        self.lectionLabel.text = String(self.lectionNumber)
         getQuestions()
         newQuestion()
     }
@@ -42,7 +47,7 @@ class ExamVocabularyController: UIViewController {
         
         if (sender.tag == Int(rightAnswerPlacement)) {
             print("RIGHT!")
-            points += 1
+            points += 10
             print(points)
         }
         else {
@@ -56,6 +61,7 @@ class ExamVocabularyController: UIViewController {
     
     // Se obtienen las 10 preguntas de manera aleatoria del banco de preguntas
     func getQuestions(){
+        
         db.collection(collection).getDocuments() {
             (querySnapshot, err) in
             
@@ -130,7 +136,43 @@ class ExamVocabularyController: UIViewController {
         }
     }
     
+    func updateExamScore () {
+        let attribute = "examvocab" + String(self.lectionNumber)
+        
+        // Se lee el documento del usuario
+        let user = Auth.auth().currentUser?.uid ?? ""
+        let docRef = db.collection("users").document(user)
+        
+        // Se lee el documento
+        docRef.getDocument { (document, error) in
+            guard let document = document, document.exists else {
+                return
+            }
+            let dataDescription = document.data()
+            let currentScore = dataDescription?[attribute] as? Int ?? 0
+            // Test
+            print("\(currentScore)")
+            print("\(self.points)")
+            
+            // Se compara el valor actual con el valor almacenado
+            if (currentScore < self.points) {
+                // Se actualiza el valor en la base de datos
+                self.db.collection("users").document(user).setData([attribute : self.points], merge : true) { (error) in
+                    
+                    if error != nil {
+                        // Mostrar el error
+                        // self.MostrarAlerta("Error", "Los datos no se guardaron de manera adecuada")
+                    }
+                }
+            }
+        }
+    }
+    
     @IBAction func examButton(_ sender: Any) {
+        
+        // Se actualiza el documento del usuario para actualizar el valor del examen
+        updateExamScore()
+        // Se muestra la vista de ExamenController
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let imageViewController = storyBoard.instantiateViewController(withIdentifier: "ExamView")
         imageViewController.modalPresentationStyle = .fullScreen

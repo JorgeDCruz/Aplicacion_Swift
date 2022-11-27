@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 import FirebaseAuth
 
 class ViewController: UIViewController {
@@ -73,6 +75,25 @@ class ViewController: UIViewController {
                 }
                 else {
                     if self.isLoggedIn == true{
+                        // Valida si es administrador o no
+                        let db = Firestore.firestore()
+                        
+                        guard let userID = Auth.auth().currentUser?.uid else { self.MostrarAlerta("Error", "No se ha podido hacer la conexión con la base de datos")
+                            return
+                        }
+                        // Obtiene document id
+                        db.collection("admins").whereField("user", arrayContains: userID).getDocuments() { (querySnapshot, error) in
+                            
+                            if error != nil {
+                                self.MostrarAlerta("Error", "No se ha podido hacer la conexión con la base de datos")
+                                return
+                            } else {
+                                if (querySnapshot!.documents.count != 0) {
+                                    MyVariables.isAdmin = true
+                                }
+                            }
+                        }
+                        
                         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                         let imageViewController = storyBoard.instantiateViewController(withIdentifier: "LectionView")
                         imageViewController.modalPresentationStyle = .fullScreen
