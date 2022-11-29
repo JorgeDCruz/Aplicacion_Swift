@@ -131,11 +131,7 @@ class SignUpController: UIViewController{
                 }
             }
             // Se mueve a la pantalla
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let companyController = storyBoard.instantiateViewController(withIdentifier: "CompanyView")
-            companyController.modalPresentationStyle = .fullScreen
-            self.present(companyController, animated: true)
-            
+            self.present(MyVariables.logInButton(), animated: true)
         }
         
         // Validar los campos
