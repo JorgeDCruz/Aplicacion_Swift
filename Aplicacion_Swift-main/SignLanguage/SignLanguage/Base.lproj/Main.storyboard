@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="ViewController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="ViewController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,7 +145,7 @@
         <!--Create Group Controller-->
         <scene sceneID="WUy-qh-Xx7">
             <objects>
-                <viewController storyboardIdentifier="CreateGroupView" id="BeZ-dK-zxw" customClass="CreateGroupController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateGroupView" id="BeZ-dK-zxw" customClass="CreateGroupController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QNc-5i-sdW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,7 +275,7 @@
         <!--Configure Group Controller-->
         <scene sceneID="gQQ-K4-shT">
             <objects>
-                <viewController storyboardIdentifier="ConfigureGroupView" id="O50-qw-U10" customClass="ConfigureGroupController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfigureGroupView" id="O50-qw-U10" customClass="ConfigureGroupController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="abZ-v3-c1Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -463,7 +463,7 @@
         <!--Join Group Controller-->
         <scene sceneID="a4Y-aZ-ed1">
             <objects>
-                <viewController storyboardIdentifier="JoinGroupView" id="MXS-Vn-cTt" customClass="JoinGroupController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JoinGroupView" id="MXS-Vn-cTt" customClass="JoinGroupController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GET-7O-m6w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -583,7 +583,7 @@
         <!--Aviso De Privacidad Controller-->
         <scene sceneID="s5e-pm-xpt">
             <objects>
-                <viewController storyboardIdentifier="AvisoDePrivacidadView" id="7yi-yH-FiN" customClass="AvisoDePrivacidadController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AvisoDePrivacidadView" id="7yi-yH-FiN" customClass="AvisoDePrivacidadController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VpF-aG-a0o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -634,7 +634,7 @@
         <!--Sign Up Controller-->
         <scene sceneID="Tc2-rL-LOV">
             <objects>
-                <viewController storyboardIdentifier="SignUpView" id="fAc-Nc-1U5" customClass="SignUpController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpView" id="fAc-Nc-1U5" customClass="SignUpController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j6a-af-rgQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -833,7 +833,7 @@
         <!--Company Controller-->
         <scene sceneID="766-2R-CRW">
             <objects>
-                <viewController storyboardIdentifier="CompanyView" id="Ruy-bp-DjV" customClass="CompanyController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompanyView" id="Ruy-bp-DjV" customClass="CompanyController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iDk-p4-22H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1009,7 +1009,7 @@
         <!--Lection Controller-->
         <scene sceneID="r8J-3d-6aD">
             <objects>
-                <viewController storyboardIdentifier="LectionView" id="PQn-aN-pV4" customClass="LectionController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LectionView" id="PQn-aN-pV4" customClass="LectionController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wp0-fx-F23">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1024,7 +1024,7 @@
                                 <rect key="frame" x="38" y="165" width="339" height="634"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Boton1" id="kBX-oj-WJA" customClass="LectionTable" customModule="App_Etapa3" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Boton1" id="kBX-oj-WJA" customClass="LectionTable" customModule="SignLanguage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="339" height="5.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kBX-oj-WJA" id="Um0-mq-8uJ">
@@ -1040,8 +1040,8 @@
                                             <constraints>
                                                 <constraint firstItem="YYH-5K-Cxj" firstAttribute="top" secondItem="Um0-mq-8uJ" secondAttribute="topMargin" constant="8.5" id="1aL-51-KFw"/>
                                                 <constraint firstItem="YYH-5K-Cxj" firstAttribute="centerX" secondItem="Um0-mq-8uJ" secondAttribute="centerX" id="4Yf-sM-iy7"/>
-                                                <constraint firstItem="YYH-5K-Cxj" firstAttribute="centerY" secondItem="Um0-mq-8uJ" secondAttribute="centerY" id="W3M-5u-K57"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="YYH-5K-Cxj" secondAttribute="bottom" constant="-39.5" id="5Mv-z8-x24"/>
+                                                <constraint firstItem="YYH-5K-Cxj" firstAttribute="centerY" secondItem="Um0-mq-8uJ" secondAttribute="centerY" id="W3M-5u-K57"/>
                                                 <constraint firstItem="YYH-5K-Cxj" firstAttribute="leading" secondItem="Um0-mq-8uJ" secondAttribute="leadingMargin" constant="-20" id="yEb-JK-7ZU"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1125,7 +1125,7 @@
         <!--Profile Controller-->
         <scene sceneID="hK0-2A-hEm">
             <objects>
-                <viewController storyboardIdentifier="ProfileView" id="Trd-3C-wkx" customClass="ProfileController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileView" id="Trd-3C-wkx" customClass="ProfileController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KUB-ww-EL6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1200,9 +1200,8 @@
                                     <constraint firstAttribute="height" constant="128" id="6Ki-Od-OKI"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7B-D9-vOI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7B-D9-vOI">
                                 <rect key="frame" x="56" y="352" width="103" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Exámenes"/>
                                 <connections>
@@ -1255,7 +1254,7 @@
         <!--Exam Controller-->
         <scene sceneID="tqS-sr-TmQ">
             <objects>
-                <viewController storyboardIdentifier="ExamView" id="8Zb-vZ-jT4" customClass="ExamController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExamView" id="8Zb-vZ-jT4" customClass="ExamController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="whB-OI-Jvw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1397,7 +1396,7 @@
         <!--Exam Vocabulary Controller-->
         <scene sceneID="qMl-8J-eNB">
             <objects>
-                <viewController storyboardIdentifier="ExamVocabularyView" id="Bxl-oX-yoH" customClass="ExamVocabularyController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExamVocabularyView" id="Bxl-oX-yoH" customClass="ExamVocabularyController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qav-V7-Crz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1569,7 +1568,7 @@
         <!--Diccionario Controller-->
         <scene sceneID="CVA-zb-LbH">
             <objects>
-                <viewController id="BGY-f7-3iw" customClass="DiccionarioController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BGY-f7-3iw" customClass="DiccionarioController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Hc-Rv-we3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1578,10 +1577,10 @@
                                 <rect key="frame" x="0.0" y="81" width="414" height="738"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="122" id="aqV-vt-SgN" customClass="DiccionarioTableViewCell" customModule="App_Etapa3" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="122" id="aqV-vt-SgN" customClass="DiccionarioTableViewCell" customModule="SignLanguage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aqV-vt-SgN" id="70g-An-kP5" customClass="DiccionarioTableViewCell" customModule="App_Etapa3" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aqV-vt-SgN" id="70g-An-kP5" customClass="DiccionarioTableViewCell" customModule="SignLanguage" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
@@ -1641,7 +1640,7 @@
         <!--Admin Profile Controller-->
         <scene sceneID="aM4-5E-oIb">
             <objects>
-                <viewController storyboardIdentifier="AdminProfileView" id="aWd-Mx-FQW" customClass="AdminProfileController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminProfileView" id="aWd-Mx-FQW" customClass="AdminProfileController" customModule="SignLanguage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jQU-Ww-tCl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

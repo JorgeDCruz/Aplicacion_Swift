@@ -23,11 +23,10 @@
 		FB549D7B2935959E002502E2 /* DiccionarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB549D692935959E002502E2 /* DiccionarioController.swift */; };
 		FB549D7C2935959E002502E2 /* ExamVocabTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB549D6A2935959E002502E2 /* ExamVocabTableViewCell.xib */; };
 		FB549D7D2935959E002502E2 /* LectionExamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB549D6B2935959E002502E2 /* LectionExamTableViewCell.xib */; };
-		FB549D7E2935959E002502E2 /* DictionaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB549D6C2935959E002502E2 /* DictionaryTableViewCell.swift */; };
 		FB549D7F2935959E002502E2 /* GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB549D6D2935959E002502E2 /* GroupsTableViewCell.swift */; };
 		FB549D802935959E002502E2 /* MyExamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB549D6E2935959E002502E2 /* MyExamsTableViewCell.xib */; };
-		FB549D812935959E002502E2 /* DictionaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB549D6F2935959E002502E2 /* DictionaryTableViewCell.xib */; };
-		FB549D822935959E002502E2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB549D702935959E002502E2 /* Info.plist */; };
+		FB55933F2935A0EA00033CFB /* DictionaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55933E2935A0EA00033CFB /* DictionaryTableViewCell.swift */; };
+		FB5593412935A0F600033CFB /* DictionaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB5593402935A0F600033CFB /* DictionaryTableViewCell.xib */; };
 		FB7EF70B291B3DDC006FA908 /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = FB7EF70A291B3DDC006FA908 /* DropDown */; };
 		FB85CF33292E6235007F1DA6 /* AdminProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85CF32292E6235007F1DA6 /* AdminProfileController.swift */; };
 		FBB6B0FD29132EC300DA7E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB6B0FC29132EC300DA7E84 /* AppDelegate.swift */; };
@@ -71,11 +70,11 @@
 		FB549D692935959E002502E2 /* DiccionarioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiccionarioController.swift; sourceTree = "<group>"; };
 		FB549D6A2935959E002502E2 /* ExamVocabTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExamVocabTableViewCell.xib; sourceTree = "<group>"; };
 		FB549D6B2935959E002502E2 /* LectionExamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LectionExamTableViewCell.xib; sourceTree = "<group>"; };
-		FB549D6C2935959E002502E2 /* DictionaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewCell.swift; sourceTree = "<group>"; };
 		FB549D6D2935959E002502E2 /* GroupsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsTableViewCell.swift; sourceTree = "<group>"; };
 		FB549D6E2935959E002502E2 /* MyExamsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyExamsTableViewCell.xib; sourceTree = "<group>"; };
-		FB549D6F2935959E002502E2 /* DictionaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictionaryTableViewCell.xib; sourceTree = "<group>"; };
 		FB549D702935959E002502E2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB55933E2935A0EA00033CFB /* DictionaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewCell.swift; sourceTree = "<group>"; };
+		FB5593402935A0F600033CFB /* DictionaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictionaryTableViewCell.xib; sourceTree = "<group>"; };
 		FB85CF32292E6235007F1DA6 /* AdminProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileController.swift; sourceTree = "<group>"; };
 		FBB6B0F929132EC300DA7E84 /* SignLanguage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignLanguage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB6B0FC29132EC300DA7E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,12 +133,12 @@
 		FBB6B0FB29132EC300DA7E84 /* SignLanguage */ = {
 			isa = PBXGroup;
 			children = (
+				FB5593402935A0F600033CFB /* DictionaryTableViewCell.xib */,
+				FB55933E2935A0EA00033CFB /* DictionaryTableViewCell.swift */,
 				FB549D662935959E002502E2 /* CurrentLection.swift */,
 				FB549D692935959E002502E2 /* DiccionarioController.swift */,
 				FB549D672935959E002502E2 /* DiccionarioTableViewCell.swift */,
 				FB549D652935959E002502E2 /* DiccionarioTableViewCell.xib */,
-				FB549D6C2935959E002502E2 /* DictionaryTableViewCell.swift */,
-				FB549D6F2935959E002502E2 /* DictionaryTableViewCell.xib */,
 				FB549D682935959E002502E2 /* ExamVocabTableViewCell.swift */,
 				FB549D6A2935959E002502E2 /* ExamVocabTableViewCell.xib */,
 				FB549D6D2935959E002502E2 /* GroupsTableViewCell.swift */,
@@ -255,14 +254,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB549D772935959E002502E2 /* DiccionarioTableViewCell.xib in Resources */,
-				FB549D812935959E002502E2 /* DictionaryTableViewCell.xib in Resources */,
+				FB5593412935A0F600033CFB /* DictionaryTableViewCell.xib in Resources */,
 				FB549D7D2935959E002502E2 /* LectionExamTableViewCell.xib in Resources */,
 				FB549D752935959E002502E2 /* LectionTableViewCell.xib in Resources */,
 				FBB6B10929132EC600DA7E84 /* LaunchScreen.storyboard in Resources */,
 				FBFBE71A29306644008583C5 /* GoogleService-Info.plist in Resources */,
 				FB549D7C2935959E002502E2 /* ExamVocabTableViewCell.xib in Resources */,
 				FB549D802935959E002502E2 /* MyExamsTableViewCell.xib in Resources */,
-				FB549D822935959E002502E2 /* Info.plist in Resources */,
 				FB549D742935959E002502E2 /* GroupsTableViewCell.xib in Resources */,
 				FBB6B10429132EC300DA7E84 /* Main.storyboard in Resources */,
 				FBFBE71C29306656008583C5 /* Assets.xcassets in Resources */,
@@ -293,8 +291,8 @@
 				FB549D762935959E002502E2 /* MyExamsTableViewCell.swift in Sources */,
 				FB549D7B2935959E002502E2 /* DiccionarioController.swift in Sources */,
 				FB549D792935959E002502E2 /* DiccionarioTableViewCell.swift in Sources */,
+				FB55933F2935A0EA00033CFB /* DictionaryTableViewCell.swift in Sources */,
 				FBFBE71829306148008583C5 /* Variables.swift in Sources */,
-				FB549D7E2935959E002502E2 /* DictionaryTableViewCell.swift in Sources */,
 				FB549D7A2935959E002502E2 /* ExamVocabTableViewCell.swift in Sources */,
 				FBB6B0FF29132EC300DA7E84 /* SceneDelegate.swift in Sources */,
 				FBB6B11A29148DAA00DA7E84 /* LectionTable.swift in Sources */,
