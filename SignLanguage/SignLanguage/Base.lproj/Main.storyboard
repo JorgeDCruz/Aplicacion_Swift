@@ -1325,15 +1325,6 @@
                                     <action selector="GroupButton:" destination="Trd-3C-wkx" eventType="touchUpInside" id="J3H-2l-BzK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCZ-pD-ZNh">
-                                <rect key="frame" x="197" y="186" width="180" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="k2d-oN-Nmy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YzM-Du-eQC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1532,12 +1523,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOa-ID-BCu">
-                                <rect key="frame" x="227" y="107.5" width="18" height="32.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vocabulario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEB-8V-XpO">
                                 <rect key="frame" x="151" y="162" width="113" height="21"/>
                                 <constraints>
@@ -1668,8 +1653,8 @@
                             <constraint firstItem="ZSw-b7-Yfd" firstAttribute="baseline" secondItem="iYE-AY-BwN" secondAttribute="baseline" id="WqT-Oy-oMu"/>
                             <constraint firstItem="ugu-VO-4EC" firstAttribute="leading" secondItem="APp-g6-7go" secondAttribute="leading" constant="33" id="X4o-vU-skO"/>
                             <constraint firstItem="APp-g6-7go" firstAttribute="bottom" secondItem="Ktc-uE-17s" secondAttribute="bottom" constant="9" id="ZiJ-bC-LUw"/>
-                            <constraint firstItem="MOa-ID-BCu" firstAttribute="trailing" secondItem="iYE-AY-BwN" secondAttribute="trailing" id="b4Z-Ra-bQC"/>
-                            <constraint firstItem="CEB-8V-XpO" firstAttribute="leading" secondItem="APp-g6-7go" secondAttribute="leading" constant="151" id="b5Z-A0-sRP"/>
+                            <constraint firstItem="MOa-ID-BCu" firstAttribute="trailing" secondItem="iYE-AY-BwN" secondAttribute="trailing" constant="45" id="b4Z-Ra-bQC"/>
+                            <constraint firstItem="CEB-8V-XpO" firstAttribute="leading" secondItem="APp-g6-7go" secondAttribute="leading" constant="130" id="b5Z-A0-sRP"/>
                             <constraint firstItem="w3h-CX-pQM" firstAttribute="leading" secondItem="APp-g6-7go" secondAttribute="leading" constant="54" id="cv2-xE-5RD"/>
                             <constraint firstItem="Ktc-uE-17s" firstAttribute="leading" secondItem="APp-g6-7go" secondAttribute="leading" constant="109" id="dnm-qH-Abo"/>
                             <constraint firstItem="dEd-f1-TBx" firstAttribute="centerX" secondItem="w3h-CX-pQM" secondAttribute="centerX" id="glX-bC-gJ0"/>
