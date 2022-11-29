@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FB0B646429247580007EA574 /* ExamVocabularyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B646329247580007EA574 /* ExamVocabularyController.swift */; };
 		FB35B6A3293199E7007E9235 /* AvisoDePrivacidadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35B6A2293199E7007E9235 /* AvisoDePrivacidadController.swift */; };
+		FB3745862936C4FA00F363F1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3745852936C4FA00F363F1 /* Settings.swift */; };
+		FB3745882936C50800F363F1 /* MemberProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3745872936C50700F363F1 /* MemberProfileController.swift */; };
 		FB477B6A2927197900E7C24E /* ExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB477B692927197900E7C24E /* ExamController.swift */; };
 		FB549D712935959E002502E2 /* LectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB549D5F2935959D002502E2 /* LectionTableViewCell.swift */; };
 		FB549D722935959E002502E2 /* LectionExamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB549D602935959D002502E2 /* LectionExamTableViewCell.swift */; };
@@ -56,6 +58,8 @@
 /* Begin PBXFileReference section */
 		FB0B646329247580007EA574 /* ExamVocabularyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamVocabularyController.swift; sourceTree = "<group>"; };
 		FB35B6A2293199E7007E9235 /* AvisoDePrivacidadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisoDePrivacidadController.swift; sourceTree = "<group>"; };
+		FB3745852936C4FA00F363F1 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		FB3745872936C50700F363F1 /* MemberProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberProfileController.swift; sourceTree = "<group>"; };
 		FB477B692927197900E7C24E /* ExamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamController.swift; sourceTree = "<group>"; };
 		FB549D5F2935959D002502E2 /* LectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectionTableViewCell.swift; sourceTree = "<group>"; };
 		FB549D602935959D002502E2 /* LectionExamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectionExamTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 		FBB6B0FB29132EC300DA7E84 /* SignLanguage */ = {
 			isa = PBXGroup;
 			children = (
+				FB3745872936C50700F363F1 /* MemberProfileController.swift */,
+				FB3745852936C4FA00F363F1 /* Settings.swift */,
 				FB5593402935A0F600033CFB /* DictionaryTableViewCell.xib */,
 				FB55933E2935A0EA00033CFB /* DictionaryTableViewCell.swift */,
 				FB549D662935959E002502E2 /* CurrentLection.swift */,
@@ -275,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB549D782935959E002502E2 /* CurrentLection.swift in Sources */,
+				FB3745882936C50800F363F1 /* MemberProfileController.swift in Sources */,
 				FB0B646429247580007EA574 /* ExamVocabularyController.swift in Sources */,
 				FBB6B10129132EC300DA7E84 /* ViewController.swift in Sources */,
 				FBB6B11729148D8800DA7E84 /* LectionController.swift in Sources */,
@@ -298,6 +305,7 @@
 				FBB6B11A29148DAA00DA7E84 /* LectionTable.swift in Sources */,
 				FB549D732935959E002502E2 /* GroupsViewController.swift in Sources */,
 				FBB6B11E2915548100DA7E84 /* ProfileController.swift in Sources */,
+				FB3745862936C4FA00F363F1 /* Settings.swift in Sources */,
 				FB85CF33292E6235007F1DA6 /* AdminProfileController.swift in Sources */,
 				FB477B6A2927197900E7C24E /* ExamController.swift in Sources */,
 			);
