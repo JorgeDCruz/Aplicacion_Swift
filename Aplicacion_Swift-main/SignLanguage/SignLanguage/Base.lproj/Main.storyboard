@@ -1673,79 +1673,6 @@
             </objects>
             <point key="canvasLocation" x="4853.6231884057979" y="95.758928571428569"/>
         </scene>
-        <!--Diccionario Controller-->
-        <scene sceneID="CVA-zb-LbH">
-            <objects>
-                <viewController id="BGY-f7-3iw" customClass="DiccionarioController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4Hc-Rv-we3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="2" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="s1K-JU-bhU">
-                                <rect key="frame" x="0.0" y="81" width="414" height="738"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="122" id="aqV-vt-SgN" customClass="DiccionarioTableViewCell" customModule="App_Etapa3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="122"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aqV-vt-SgN" id="70g-An-kP5" customClass="DiccionarioTableViewCell" customModule="App_Etapa3" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0R9-Xs-cbU">
-                                                    <rect key="frame" x="60" y="11" width="100" height="96"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="BQt-jT-nqD"/>
-                                                        <constraint firstAttribute="height" constant="200" id="RZJ-BK-rwV"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOr-wX-7XN">
-                                                    <rect key="frame" x="293" y="11" width="41.5" height="100"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <connections>
-                                                <outlet property="label" destination="AOr-wX-7XN" id="XPC-Xi-dgz"/>
-                                                <outlet property="letra" destination="0R9-Xs-cbU" id="MiS-f7-JAM"/>
-                                            </connections>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="label" destination="AOr-wX-7XN" id="elc-WG-4ae"/>
-                                            <outlet property="letra" destination="0R9-Xs-cbU" id="2Iy-c8-waM"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diccionario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYa-2n-hBb">
-                                <rect key="frame" x="154" y="47" width="106" height="26"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
-                                <color key="textColor" systemColor="systemPinkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="yCQ-6P-TRJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="s1K-JU-bhU" firstAttribute="centerX" secondItem="4Hc-Rv-we3" secondAttribute="centerX" id="B33-h3-klS"/>
-                            <constraint firstItem="OYa-2n-hBb" firstAttribute="centerX" secondItem="s1K-JU-bhU" secondAttribute="centerX" id="LS9-Jg-lV8"/>
-                            <constraint firstItem="yCQ-6P-TRJ" firstAttribute="bottom" secondItem="s1K-JU-bhU" secondAttribute="bottom" constant="43" id="MAw-Hg-qty"/>
-                            <constraint firstItem="s1K-JU-bhU" firstAttribute="top" secondItem="OYa-2n-hBb" secondAttribute="bottom" constant="8" symbolic="YES" id="kjg-xV-hkg"/>
-                            <constraint firstItem="s1K-JU-bhU" firstAttribute="top" secondItem="yCQ-6P-TRJ" secondAttribute="top" constant="33" id="oeL-Jr-VDe"/>
-                            <constraint firstItem="s1K-JU-bhU" firstAttribute="leading" secondItem="yCQ-6P-TRJ" secondAttribute="leading" id="ty1-aA-fy0"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="Dicctable" destination="s1K-JU-bhU" id="b87-sn-9Lg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0a2-Qs-1cq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5721.739130434783" y="104.46428571428571"/>
-        </scene>
-    </scenes>
         <!--Admin Profile Controller-->
         <scene sceneID="aM4-5E-oIb">
             <objects>
@@ -1906,6 +1833,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Fk-oX-5G7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="760.71428571428567"/>
+        </scene>
+    </scenes>
+    <!--Diccionario Controller-->
+        <scene sceneID="CVA-zb-LbH">
+            <objects>
+                <viewController id="BGY-f7-3iw" customClass="DiccionarioController" customModule="App_Etapa3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Hc-Rv-we3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="2" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="s1K-JU-bhU">
+                                <rect key="frame" x="0.0" y="81" width="414" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="122" id="aqV-vt-SgN" customClass="DiccionarioTableViewCell" customModule="App_Etapa3" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="122"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aqV-vt-SgN" id="70g-An-kP5" customClass="DiccionarioTableViewCell" customModule="App_Etapa3" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0R9-Xs-cbU">
+                                                    <rect key="frame" x="60" y="11" width="100" height="96"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="BQt-jT-nqD"/>
+                                                        <constraint firstAttribute="height" constant="200" id="RZJ-BK-rwV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOr-wX-7XN">
+                                                    <rect key="frame" x="293" y="11" width="41.5" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <connections>
+                                                <outlet property="label" destination="AOr-wX-7XN" id="XPC-Xi-dgz"/>
+                                                <outlet property="letra" destination="0R9-Xs-cbU" id="MiS-f7-JAM"/>
+                                            </connections>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="AOr-wX-7XN" id="elc-WG-4ae"/>
+                                            <outlet property="letra" destination="0R9-Xs-cbU" id="2Iy-c8-waM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diccionario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYa-2n-hBb">
+                                <rect key="frame" x="154" y="47" width="106" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yCQ-6P-TRJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s1K-JU-bhU" firstAttribute="centerX" secondItem="4Hc-Rv-we3" secondAttribute="centerX" id="B33-h3-klS"/>
+                            <constraint firstItem="OYa-2n-hBb" firstAttribute="centerX" secondItem="s1K-JU-bhU" secondAttribute="centerX" id="LS9-Jg-lV8"/>
+                            <constraint firstItem="yCQ-6P-TRJ" firstAttribute="bottom" secondItem="s1K-JU-bhU" secondAttribute="bottom" constant="43" id="MAw-Hg-qty"/>
+                            <constraint firstItem="s1K-JU-bhU" firstAttribute="top" secondItem="OYa-2n-hBb" secondAttribute="bottom" constant="8" symbolic="YES" id="kjg-xV-hkg"/>
+                            <constraint firstItem="s1K-JU-bhU" firstAttribute="top" secondItem="yCQ-6P-TRJ" secondAttribute="top" constant="33" id="oeL-Jr-VDe"/>
+                            <constraint firstItem="s1K-JU-bhU" firstAttribute="leading" secondItem="yCQ-6P-TRJ" secondAttribute="leading" id="ty1-aA-fy0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Dicctable" destination="s1K-JU-bhU" id="b87-sn-9Lg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0a2-Qs-1cq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5721.739130434783" y="104.46428571428571"/>
         </scene>
     </scenes>
     <resources>
