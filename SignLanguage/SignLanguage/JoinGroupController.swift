@@ -33,11 +33,18 @@ class JoinGroupController: UIViewController {
             // Validación de correcto código
             db.collection("groups").document(self.codeGroupTextField.text!).getDocument(completion: { document, error in
                 if error != nil {
-                    self.present(MyVariables.MostrarAlerta("Error", "Asegúrate de introducir un código válido"), animated: true, completion: nil)
+                    self.present(MyVariables.MostrarAlerta("Error", "No se ha podido establecer conexión con la base de datos"), animated: true, completion: nil)
                     return
                 }
-                users = document?.get("users") as! [String]
+                if (document!.get("users") != nil) {
+                    users = document!.get("users") as! [String]
+                }
+                                                                                        
             })
+            if (users.isEmpty) {
+                self.present(MyVariables.MostrarAlerta("Error", "Asegúrate de introducir un código válido"), animated: true, completion: nil)
+                return
+            }
             
             if (users.contains(userID)) {
                 self.present(MyVariables.MostrarAlerta("Error", "Ya estás unido en este grupo"), animated: true, completion: nil)
