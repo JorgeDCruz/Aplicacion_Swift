@@ -16,11 +16,19 @@ class ProfileController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var lastnameLabel: UILabel!
     @IBOutlet var StatusTable: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         getData()
         StatusTable.dataSource = self
+    }
+    
+    @IBAction func JoinGroupButton(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let imageViewController = storyBoard.instantiateViewController(withIdentifier: "JoinGroupView")
+            imageViewController.modalPresentationStyle = .fullScreen
+            self.present(imageViewController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,16 +89,10 @@ class ProfileController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func LogOutButton(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "LoginView")
-        imageViewController.modalPresentationStyle = .fullScreen
-        self.present(imageViewController, animated: true)
+        self.present(MyVariables.logOutButton(), animated: true)
     }
     
     @IBAction func HomeButton(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "LectionView")
-        imageViewController.modalPresentationStyle = .fullScreen
-        self.present(imageViewController, animated: true)
+        self.present(MyVariables.homeButton(), animated: true)
     }
 }

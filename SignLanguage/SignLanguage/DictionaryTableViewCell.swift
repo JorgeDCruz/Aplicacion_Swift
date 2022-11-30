@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DictionaryTableViewCellDelegate : AnyObject {
-    func didTapButton(with lection : Int)
+    func goToDictionary(with lection : Int)
 }
 
 class DictionaryTableViewCell: UITableViewCell {
@@ -25,8 +25,8 @@ class DictionaryTableViewCell: UITableViewCell {
     
     @IBOutlet var button : UIButton!
     
-    @IBAction func didTapButton() {
-        delegate?.didTapButton(with: lection)
+    @IBAction func goToDictionary() {
+        delegate?.goToDictionary(with: lection)
     }
     
     func configure(_ lection : Int) {

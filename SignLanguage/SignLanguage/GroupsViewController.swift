@@ -56,9 +56,9 @@ class GroupsViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if(Settings.instance.groups.isEmpty && Settings.instance.members.isEmpty) {
-            getGroups()
-        }
+        //if(Settings.instance.groups.isEmpty && Settings.instance.members.isEmpty) {
+            //getGroups()
+        //}
         GroupsTable.dataSource = self
     }
     

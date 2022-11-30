@@ -113,7 +113,8 @@ class SignUpController: UIViewController{
                 // Se comprueba que no haya errores
                 if err != nil {
                     // Hubo un error creando al usuario
-                    self.MostrarAlerta("Error", "Se ha producido un error al crear al usuario, pruebe cambiando el correo electrónico u otros datos")
+                    self.MostrarAlerta("Error", "Se ha producido un error al crear al usuario, pruebe cambiando el correo electrónico")
+                    return
                 }
                 else {
                     // El usuario se creo de manera exitosa, se almacena el nombre y apellido
@@ -124,14 +125,18 @@ class SignUpController: UIViewController{
                         if error != nil {
                             // Mostrar el error
                             self.MostrarAlerta("Error", "Los datos no se guardaron de manera adecuada")
+                            return
                         }
+                        // Se mueve a la pantalla
+                        let alert = UIAlertController(title: "Éxito", message: "Se ha creado la cuenta con éxito", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
                     }
                     
                     
                 }
             }
-            // Se mueve a la pantalla
-            self.present(MyVariables.logInButton(), animated: true)
+            
         }
         
         // Validar los campos

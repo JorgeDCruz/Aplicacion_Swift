@@ -13,6 +13,9 @@ import FirebaseCore
 class DiccionarioController: UIViewController, UITableViewDataSource{
   
     let database = Firestore.firestore()
+    var lectionNumber : Int = Settings.instance.lectionNumber
+    var collection : String = ""
+
     
     
     @IBOutlet weak var Dicctable: UITableView!
@@ -22,7 +25,7 @@ class DiccionarioController: UIViewController, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: DiccionarioTableViewCell.identifier, for: indexPath) as! DiccionarioTableViewCell
         let documentname = "Letter" + String(indexPath.row)
-        let docref = database.collection("dictionary/Alphabet/Letters").document(documentname)
+        let docref = database.collection(self.collection).document(documentname)
         docref.getDocument { (document, error) in
             guard let document = document, document.exists else {
                 return
@@ -37,9 +40,14 @@ class DiccionarioController: UIViewController, UITableViewDataSource{
         return cell
     }
     
+    @IBAction func HomeButton(_ sender: Any) {
+        self.present(MyVariables.homeButton(), animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Dicctable.dataSource = self
+        self.collection = "dictionary/Alphabet" + String(self.lectionNumber) + "/Letters"
     }
         // Do any additional setuafter loading the view.
     }

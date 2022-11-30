@@ -55,6 +55,7 @@ public struct MyVariables {
     }
     
     static func logOutButton() -> UIViewController {
+        self.isAdmin = false
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let imageViewController = storyBoard.instantiateViewController(withIdentifier: "LoginView")
         imageViewController.modalPresentationStyle = .fullScreen

@@ -26,21 +26,6 @@ class LectionController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        /*// Celda para el boton de glosario - redirige al diccionario de la leccion
-        if indexPath.row % 3 == 0 {
-            
-            tableView.register(UINib(nibName: "LectionTableViewCell", bundle: nil), forCellReuseIdentifier: "LectionTableViewCell")
-            let cellLection = tableView.dequeueReusableCell(withIdentifier: "LectionTableViewCell", for: indexPath) as! LectionTableViewCell
-            
-            // Se obtiene el numero de la leccion
-            let lection = indexPath.section + 1
-            cellLection.configure(lection)
-            cellLection.delegate = self
-            
-            return cellLection
-        }*/
-        
         if indexPath.row % 2 == 0 {
             
             tableView.register(UINib(nibName: "DictionaryTableViewCell", bundle: nil), forCellReuseIdentifier: "DictionaryTableViewCell")
@@ -49,7 +34,7 @@ class LectionController: UIViewController, UITableViewDataSource {
             // Se obtiene el numero de la leccion
             let lection = indexPath.section + 1
             cellDictionary.configure(lection)
-            // cellDictionary.delegate = self
+            cellDictionary.delegate = self
             
             return cellDictionary
         }
@@ -89,26 +74,17 @@ class LectionController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func ProfileButton(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileView")
-        imageViewController.modalPresentationStyle = .fullScreen
-        self.present(imageViewController, animated: true)
+        self.present(MyVariables.userProfileButton(), animated: true)
 
     }
     
     @IBAction func LogOutButton(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "LoginView")
-        imageViewController.modalPresentationStyle = .fullScreen
-        self.present(imageViewController, animated: true)
+        self.present(MyVariables.logOutButton(), animated: true)
     }
     
     
     @IBAction func HomeButton(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "LectionView")
-        imageViewController.modalPresentationStyle = .fullScreen
-        self.present(imageViewController, animated: true)
+        self.present(MyVariables.homeButton(), animated: true)
     }
     
     override func viewDidLoad() {
@@ -122,9 +98,16 @@ class LectionController: UIViewController, UITableViewDataSource {
     
 }
 
-extension LectionController : LectionTableViewCellDelegate {
-    func didTapButton(with lection: Int) {
+extension LectionController : DictionaryTableViewCellDelegate {
+    func goToDictionary(with lection: Int) {
+        // La leccion se configura en el controller para leer el examen correspondiente en la BD
+        Settings.instance.lectionNumber = lection
         
+        // Cambio de vista a ExamVocabularyViewController
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let imageViewController = storyBoard.instantiateViewController(withIdentifier: "DiccionarioView")
+        imageViewController.modalPresentationStyle = .fullScreen
+        self.present(imageViewController, animated: true)
     }
 }
 
