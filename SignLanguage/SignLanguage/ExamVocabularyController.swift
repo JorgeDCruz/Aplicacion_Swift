@@ -41,12 +41,13 @@ class ExamVocabularyController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func checkAnswer(_ sender: AnyObject) {
+    @IBAction func checkAnswer(_ sender: UIButton) {
         
         self.userProgress.progress += 0.1
         
         if (sender.tag == Int(rightAnswerPlacement)) {
             print("RIGHT!")
+            sender.backgroundColor = UIColor.green
             points += 10
             print(points)
         }

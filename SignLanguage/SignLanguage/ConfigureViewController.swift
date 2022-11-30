@@ -85,12 +85,14 @@ class ConfigureGroupController: UIViewController {
         else {
             let db = Firestore.firestore()
                     db.collection("groups").document(docID[indexDoc]).updateData(["name": self.newNameGroupTextField.text!])
-                    self.MostrarAlerta("Éxito", "Nombre del grupo cambiado con éxito")
             nameDocs[indexDoc] = newNameGroupTextField.text!
+            self.codeGroupLabel.text! = docID[indexDoc]
+             self.nameGroupLabel.text! = nameDocs[indexDoc]
+            self.selectGroupButton.setTitle(nameDocs[indexDoc], for: .normal)
+            self.MostrarAlerta("Éxito", "Nombre del grupo cambiado con éxito")
+            
                 }
-        self.codeGroupLabel.text! = docID[indexDoc]
-         self.nameGroupLabel.text! = nameDocs[indexDoc]
-        self.selectGroupButton.titleLabel!.text = nameDocs[indexDoc]
+       
             }
 
     func UpdateDataInView() {
@@ -119,9 +121,7 @@ class ConfigureGroupController: UIViewController {
                     docID.append(document.documentID)
                     doc.append(document)
                     }
-                // Obtiene nombre de grupo y código
-               /*    self.codeGroupLabel.text! = docID[0]
-                self.nameGroupLabel.text! = (doc[0] as AnyObject).get("name") as! String*/
+
                         
                         }
                 

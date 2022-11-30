@@ -138,43 +138,12 @@ class SignUpController: UIViewController{
             }
             
         }
-        
-        // Validar los campos
-        
-        // Crear el usuario
-        
-        /* Codigo de Mau
-        var valid = true
     
-        // Validación de contraseña
-        let caracteresRegEx = ".*(?=.{8,16})(?=.*[A-Z]).*"
-        var caracteresTest = NSPredicate(format: "SELF MATCHES %@", caracteresRegEx)
-        var caracteresResult = caracteresTest.evaluate(with: contraseñaTextField.text!)
-         let spaceResult = contraseñaTextField.text!.contains(" ")
-        
-        
-        if !caracteresResult || spaceResult && valid {
-            valid = false
-            MostrarAlerta(titulo: "Contraseña inválida", mensaje: "Introduce una contraseña de al menos 8 caracteres y máximamente 16 caracteres, al menos 1 letra mayúscula, sin espacios")
-        }
-        
-        // Validación usuario
-        let caracteresUsuarioRegEx = "^[0-9a-zA-Z\\_]{3,16}$"
-        caracteresTest = NSPredicate(format: "SELF MATCHES %@", caracteresUsuarioRegEx)
-        caracteresResult = caracteresTest.evaluate(with: usuarioTextField.text!)
-        if (!caracteresResult && valid) {
-            valid = false
-            MostrarAlerta(titulo: "Usuario inválido", mensaje: "Introduce un usuario de al menos 3 caracteres y máximamente 16 caracteres, sin espacios y sin símbolos")
-        }
-        
-        // Verificación de validaciones
-        if (valid) {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let imageViewController = storyBoard.instantiateViewController(withIdentifier: "CompanyView")
-            imageViewController.modalPresentationStyle = .fullScreen
-            self.present(imageViewController, animated: true)
-         } */
 }
+    
+    @IBAction func AvisoDePrivacidadButton(_ sender: Any) {
+           self.present(MyVariables.AvisoDePrivacidadButton(), animated: true, completion: nil)
+       }
     
     func showError(_ message : String) {
         errorLabel.text = message
