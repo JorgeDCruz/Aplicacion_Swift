@@ -39,6 +39,9 @@ class JoinGroupController: UIViewController {
                 if (document!.get("users") != nil) {
                     users = document!.get("users") as! [String]
                 }
+                else {
+                    users = [String]()
+                }
                                                                                         
             })
             if (users.isEmpty) {
