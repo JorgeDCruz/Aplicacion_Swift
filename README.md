@@ -15,10 +15,6 @@ También se contará con una documentación extensa y detallada, tanto para el u
 Para esto es necesario tener un dispositivo con macOS y el IDE XCode 13+. Será necesario descargar el .zip del repositorio o clonarlo a un repositorio en la MAC relevante, dónde este deberá de ser ejecutado con el IDE especificado.
 Posteriormente se incluirá documentación más extensa para modificaciones futuras a la APP, así como un manual de usuario para el uso continúo de la aplicación o dudas que llegasen a existir al momento de su ejecución.
 
-### ¿Y el backend de la aplicación?
-Esta está siendo desarrollado a un lado de la aplicación en un repositorio externo, esto para la facilidad del desarrollo colaborativo entre los miembros del equipo, dónde el desarrollo de la APP no se pondrá en el camino del desarrollo de la API.
-Link al repo de la API: https://github.com/Carlosmor95/Api_Equipo_Marquinhos.git
-
 La base de datos está en Firebase, dónde solamente aquellas personas con permisos de administrador tienen la posibilidad de visualización y modificación de esta. No se incluirá mayor información acerca de la base de datos por razones de seguridad.
 
 PS:(Si busca el link de github del repositorio de la aplicación, esta es: https://github.com/JorgeDCruz/Aplicacion_Swift.git).
